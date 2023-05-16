@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="./logo.png" type="image/x-icon">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="style.css">
+	<title>GCash</title>
+</head>
+<body>
+	<nav class="navbar">
+		<div class="navbar-logo">
+			<h2>GCash</h2>
+		</div>
+		<ul class="navbar-links">
+			<button class="menu-button"><i class="material-icons">menu</i></button>
+			<div class="slide-in-menu">
+				<button class="back-home-button"><i class="material-icons">arrow_back</i></button>
+				<button class="profile-button">
+					<img src="./luffy.jpg" alt="Profile Image">
+				  </button>
+				<button class="view-benefits-button"></i>View Benefits</button>
+			<ul class="verification-status">
+				<li><i class="material-icons">check_circle</i>Basic level</li>
+				<li><i class="material-icons">check_circle</i>Semi-verified</li>
+				<li><i class="material-icons">check_circle</i>Fully verified</li>
+			</ul>
+			<hr>
+			<br>
+			<div class="slide-button">
+				<button class="my-linked-accounts-button"><i class="material-icons">account_balance_wallet</i>My Linked Accounts</button>
+				<button class="gscore-button"><i class="material-icons">trending_up</i>GScore</button>
+				<button class="promos-button"><i class="material-icons">local_offer</i>Promos</button>
+				<button class="voucher-pocket-button"><i class="material-icons">credit_card</i>Voucher Pocket</button>
+				<button class="partner-merchants-button"><i class="material-icons">store</i>Partner Merchants</button>
+				<button class="refer-friends-button"><i class="material-icons">person_add</i>Refer Friends</button>
+				<button class="settings-button"><i class="material-icons">settings</i>Settings</button>
+				<button class="help-button"><i class="material-icons">help_outline</i>Help</button>
+				<button class="log-out-button"><i class="material-icons">logout</i>Log Out</button>
+			</div>		
+		</div>
+			<button class="button-menu"><i class="material-icons">mail</i></button>
+			<div class="menu-slide">
+				<button class="back-button"><i class="material-icons">arrow_back</i></button>
+				<div class="inbox">
+					<h2>Inbox</h2>
+				</div>
+			</div>
+		</ul>
+	</nav>
+	<div class="container">
+		<div class="balance">
+			<div class="balance-heading">
+			  <p class="balance-title">Balance</p>
+			  <p class="balance-credit">Credit</p>
+			</div>
+			<div class="balance-values">
+			  <p class="balance-value">2,100.00<span class="plus-icon">+</span></p>
+			</div>
+		</div>
+		<div class="available">
+		  <p>Available Balance</p>
+		</div>
+		<div class="actions">
+			<button><i class="material-icons">local_atm</i><p class="icon">Cash In</p></button>
+			<button id="send-money-btn"><i class="material-icons">send</i><p class="icon">Send Money</p></button>
+			<div id="send-money-modal" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<p>Send Money</p>
+				<h4>SEND MONEY TO GCASH ACCOUNT</h4>
+				<button class="express-send-button">
+					<img src="./money-transfer.png" alt="Money Transfer Icon">
+					<span>Express Send</span>
+				</button>
+					<div id="send-modal" class="modal">
+						<div class="modal-content">
+								<span class="close">&times;</span>
+								<h4>Express Send</h4>
+								<p class="par">
+									Send to: <input type="text" name="recipient" id="recipient" placeholder="Name" /><br />
+									Amount: <input type="text" name="amount" id="amount" placeholder="PHP" /><br />
+									Message: <input type="text" name="message" id="message" placeholder="(optional)" /><br />
+							</p>	
+							<button class="next" onclick="openNextModal()">Next</button>
+						</div>
+						<div id="next-modal" class="modal">
+							<div class="modal-content">
+									<span class="close">&times;</span>
+									<h4>Confirmation</h4>
+									<p>Are you sure you want to proceed with the transaction?</p>
+									<button class="confirm" onclick="confirmTransaction()">Send</button>
+							</div>
+					</div>
+			</div>
+				<button id="scan-qrcode-btn">
+					<img src="./qr-code.png" alt="Send via QR">
+					<span>Send via QR</span>
+				</button>
+				<button class="express-send-button">
+					<img src="./clip.png" alt="Send With Clip">
+					<span>Send a Clip</span>
+				</button>
+				<button class="qr-code-button">
+					<img src="./Gift.png" alt="Send Gift">
+					<span>Send Gift</span>
+				</button>
+			</div>
+			</div>
+			<button><i class="material-icons">save</i><p class="icon">Save Money</p></button>
+			<button><i class="material-icons">phone_android</i><p class="icon">Buy Load</p></button>
+		</div>
+		<div class="features">
+			<button><i class="material-icons">nature</i><p class="icon">G-Forest</p></button>
+			<button><i class="material-icons">credit_card</i><p class="icon">Credit</p></button>
+			<button><i class="material-icons">receipt_long</i><p class="icon">Pay Bills</p></button>
+			<button><i class="material-icons">qr_code_2</i><p class="icon">PayQR</p></button>
+		</div>
+		<div class="features2">
+			<button><i class="material-icons">shopping_cart</i><p class="icon">Lazada</p></button>
+			<button><i class="material-icons">account_balance</i><p class="icon">Bank Transfer</p></button>
+			<button><i class="material-icons">money</i><p class="icon">KKB</p></button>
+			<button><i class="material-icons">expand_more</i><p class="icon">Show More</p></button>
+		</div>
+		<div class="history">
+		  <button>Transaction History</button>
+		</div>
+		<div class="promo">
+		  <p>More to look forward to</p>
+		  <p>Because you deserve only the best from us</p>
+		</div>
+		<div class="cashin">
+		  <p>Need to Cash-In Today?</p>
+		  <p>See updated list of available Elifestylemanila cash-in points.</p>
+		</div>
+	</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+<script src="script.js"></script>
+</html>
